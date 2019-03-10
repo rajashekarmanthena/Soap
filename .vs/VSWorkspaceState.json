@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\vendor\\bootstrap",
-    "\\vendor\\bootstrap\\js"
+    "\\css",
+    "\\vendor\\bootstrap"
   ],
-  "SelectedNode": "\\carousel.html",
+  "SelectedNode": "\\og.html",
   "PreviewInSolutionExplorer": false
 }
