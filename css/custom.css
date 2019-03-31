@@ -107,3 +107,22 @@ border: 2px solid #fa7921;
 @charset "utf-8";
 
 /* CSS Document */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: black; /* Text color */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 45px; /* Increase font size */
+}
+
+.cursor:hover {
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+
