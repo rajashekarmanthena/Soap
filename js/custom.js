@@ -1,26 +1,29 @@
 // JavaScript source code
-$(document).ready(function(){
-    $("#testimonial-slider").owlCarousel({
-        items:1,
-        itemsDesktop:[1000,1],
-        itemsDesktopSmall:[979,1],
-        itemsTablet:[768,1],
-        pagination:true,
-        navigation:false,
-        navigationText:["",""],
-        slideSpeed:1000,
-        singleItem:true,
-        transitionStyle:"fade",
-        autoPlay:true
-    });
-
+$(document).ready(function() {
+  $("#testimonial-slider").owlCarousel({
+    items: 1,
+    itemsDesktop: [1000, 1],
+    itemsDesktopSmall: [979, 1],
+    itemsTablet: [768, 1],
+    pagination: true,
+    navigation: false,
+    navigationText: ["", ""],
+    slideSpeed: 1000,
+    singleItem: true,
+    transitionStyle: "fade",
+    autoPlay: true
+  });
 });
 
-$(document).click(function(event) {
-  $(event.target).closest(".navbar").length || $(".navbar-collapse.show").length && $(".navbar-collapse.show").collapse("hide")
-});
+// $(document).click(function(event) {
+//   $(event.target).closest(".navbar").length ||
+//     ($(".navbar-collapse.show").length &&
+//       $(".navbar-collapse.show").collapse("hide"));
+// });
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -30,8 +33,21 @@ function scrollFunction() {
   }
 }
 
+$(window).on("load", function() {
+  // Animate loader off screen
+  $(".se-pre-con").fadeOut("slow");
+});
 
-$(window).on('load', function(){ 
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");
+$(document).ready(function() {
+  function checkOffset() {
+    $(".navbar-collapse").removeClass("show", 1000, "easeInBack");
+  }
+  // Run function when scrolling
+  $(window).scroll(function() {
+    checkOffset();
+  });
+  // Run function on Clicking
+  $(window).click(function() {
+    checkOffset();
+  });
 });
